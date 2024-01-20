@@ -1,0 +1,127 @@
+.box {
+    width: 80px;
+    height: 10px;
+    background-color: blue;
+    position: relative;
+    animation: mymove 2s infinite;
+    animation-direction: alternate-reverse;
+    border-radius: 80px;
+    margin: 30px;
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+        background-color: blue
+    }
+
+    to {
+        left: 200px;
+        background-color: red;
+
+    }
+}
+
+.box1 {
+    width: 30px;
+    height: 20px;
+    background-color: blue;
+    margin: 100px;
+    position: relative;
+    animation-name: mymove1;
+    border-radius: 100%;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+
+
+}
+
+@keyframes mymove1 {
+    from {
+        transform: scale(1.1);
+        width: 30px;
+        border-radius: 100%;
+    }
+
+    to {
+        transform: scale(2.2);
+        width: 50px;
+        border-radius: 20%;
+    }
+}
+
+.box2 {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    margin: 100px;
+    position: relative;
+    animation-name: mymove2;
+    border-radius: 100%;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes mymove2 {
+    from {
+        left: 0px;
+        rotate: 0deg;
+
+        width: 30px;
+        border-radius: 100%;
+    }
+
+    to {
+        left: 200px;
+        rotate: 360deg;
+
+        width: 50px;
+        border-radius: 20%;
+    }
+}
+
+.box3 {
+    display: flex;
+}
+
+p {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 100%;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    position: relative;
+    animation-name: mymove3;
+    animation-duration: 3s;
+}
+
+.box3 p:nth-child(1) {
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
+    animation: mymove3 0.5s 0.4s linear infinite;
+}
+
+.box3 p:nth-child(2) {
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
+    animation: mymove3 0.5s 0.5s linear infinite;
+}
+
+.box3 p:nth-child(3) {
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
+    animation: mymove3 0.5s 0.6s linear infinite;
+}
+
+@keyframes mymove3 {
+    0%,100%{
+        transform: translate(0px,0px);
+        }
+        50%{
+            transform: translate(0px,50px);
+        }
+}
